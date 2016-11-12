@@ -1,14 +1,11 @@
-Run the following commands on the command line in order.
 
 1. cd ~
 2. git clone --recursive https://github.com/mihirgogate/dotfiles.git dotfiles
-3. chmod +x dotfiles/setup.sh
-4. ./dotfiles/setup.sh
-5. sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"   # install oh-my-zsh
-6. ^ If you get a PAM authentication failure for making zsh your default shell you can do the following:
+3. ./install.sh
+4. ^ If you get a PAM authentication failure for making zsh your default shell you can do the following:
 - sudo vim /etc/pam.d/chsh
 - Now comment out auth required pam_shells.so
 - sudo chsh $USER -s $(which zsh)
 - now logout and login
 - it should be your default shell!
-7. Open up ~/.zshrc and set ZSH_THEME="avit"
+5. Open up ~/.zshrc and set ZSH_THEME="avit"
