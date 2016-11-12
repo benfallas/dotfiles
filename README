@@ -1,6 +1,6 @@
 
 1. cd ~
-2. git clone --recursive https://github.com/mihirgogate/dotfiles.git dotfiles
+2. git clone --recursive https://github.com/benfallas/dotfiles.git dotfiles
 3. ./install.sh
 4. ^ If you get a PAM authentication failure for making zsh your default shell you can do the following:
 - sudo vim /etc/pam.d/chsh
