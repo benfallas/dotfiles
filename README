@@ -1,11 +1,10 @@
 
 1. cd ~
 2. git clone --recursive https://github.com/benfallas/dotfiles.git dotfiles
-3. ./install.sh
+3. cd dotfiles &&  ./install.sh
 4. ^ If you get a PAM authentication failure for making zsh your default shell you can do the following:
 - sudo vim /etc/pam.d/chsh
 - Now comment out auth required pam_shells.so
 - sudo chsh $USER -s $(which zsh)
 - now logout and login
 - it should be your default shell!
-5. Open up ~/.zshrc and set ZSH_THEME="avit"
