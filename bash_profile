@@ -2,18 +2,24 @@
 alias gc='git checkout'
 alias gd='git diff'
 alias gl='git log --graph'
-alias glm='git log --author=mihir'
 alias gb='git branch'
-alias ga='git add -u .'
+alias ga='git add .'
 alias modified=$'git status | grep modified | awk \'{print $3}\''
+alias unstage='git reset .'
+alias uncommit='git reset --hard HEAD^'
 
 # General shortcuts
 alias gr='grep'
 alias ta='tmux attach'
 alias cgb="git branch | grep -E '^\*' | awk '{print $2}'"
+alias t='tree'
+alias l='clear && ls'
+alias c='cd'
+alias delarch='gb | cut -c3- | grep archpatch- | xargs -n1 gb -D'
+DATE=$(date +%m/%d/%y)
 
 # Add a new line to the shell prompt
-PS1=$PS1"\n:) "
+PS1=$PS1" $DATE @) "
 
 mkcd () { mkdir -p "$1" && cd "$1"; }
 
@@ -31,3 +37,5 @@ stty ixany
 stty ixoff -ixon
 alias act='source env/bin/activate'
 alias new-branch='git fetch origin && git checkout origin/master -b '
+
+tmux >/dev/null

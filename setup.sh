@@ -19,3 +19,6 @@ do
     sym_link_cmd="ln -vs $DOT_FILES_FOLDER/$dot_file ~/.$dot_file"
     eval $sym_link_cmd
 done
+
+echo "Make sure to update user in gitconfig"
+echo "open .gitconfig and under [user] change to your github credentials!!"
